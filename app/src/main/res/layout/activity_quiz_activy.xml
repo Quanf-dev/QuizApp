@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        >
+
+        <ProgressBar
+            android:id="@+id/progessbar"
+            style="?android:progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progressDrawable="@drawable/custom_progressbar_timer"
+
+            />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/backgroudactivity"
+            >
+            <TextView
+                android:id="@+id/tvTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:drawableLeft="@drawable/clock"
+                android:layout_gravity="center_horizontal"
+                />
+<!--            <TextView-->
+<!--                android:id="@+id/tvKiemTra"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text=""-->
+<!--                android:textSize="20sp"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:layout_gravity="right"-->
+<!--                android:background="@drawable/customedittext"-->
+<!--                android:drawableLeft="@drawable/listt"-->
+<!--                />-->
+            <pl.droidsonroids.gif.GifTextView
+                android:layout_marginTop="40dp"
+                android:id="@+id/tvKiemTra1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/listt"
+                android:layout_gravity="right"
+                />
+            <pl.droidsonroids.gif.GifTextView
+                android:layout_marginTop="40dp"
+                android:layout_weight="1"
+                android:id="@+id/tvExit1"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@drawable/exit"
+                android:layout_gravity="right"
+                />
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+
+    <androidx.viewpager.widget.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent" />
+</LinearLayout>
